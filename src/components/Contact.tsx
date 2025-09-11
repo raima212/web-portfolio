@@ -118,8 +118,8 @@ const Contact = () => {
         speed={0.8}
         squareSize={55}
         direction="diagonal"
-        borderColor="#1f2937"
-        hoverFillColor="#0f172a"
+        borderColor="#4b5563"
+        hoverFillColor="#374151"
       />
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
