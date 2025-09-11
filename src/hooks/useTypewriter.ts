@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export const useTypewriter = (text: string, speed: number = 50, delay: number = 0) => {
+export const useTypewriter = (text: string, speed: number = 50, delay: number = 0): [string, boolean] => {
   const [displayText, setDisplayText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isComplete, setIsComplete] = useState(false)
@@ -34,5 +34,5 @@ export const useTypewriter = (text: string, speed: number = 50, delay: number = 
     }
   }, [currentIndex, text, speed, delay, hasStarted])
 
-  return [displayText, isComplete] as const
+  return [displayText, isComplete]
 }
