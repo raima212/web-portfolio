@@ -37,6 +37,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
+    
+    <!-- Critical CSS inline -->
+    <style>
+      body { 
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+        margin: 0; 
+        padding: 0; 
+        background: #0f0f0f; 
+        color: #ffffff; 
+        overflow-x: hidden;
+      }
+      #root { 
+        min-height: 100vh; 
+        display: flex; 
+        flex-direction: column; 
+      }
+      /* Critical above-the-fold styles */
+      .hero-section { 
+        min-height: 100vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        position: relative; 
+        overflow: hidden; 
+      }
+      /* Prevent layout shift */
+      img { 
+        max-width: 100%; 
+        height: auto; 
+      }
+    </style>
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -73,7 +108,8 @@
     }
     </script>
     
-    <link href="/src/assets/styles/main.css" rel="stylesheet">
+    <link href="/src/assets/styles/main.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="/src/assets/styles/main.css" rel="stylesheet"></noscript>
   </head>
   <body>
     <div id="root"></div>
