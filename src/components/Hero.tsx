@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Github, Linkedin, Mail, Terminal, ChevronRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import TextType from './ui/TextType'
+import GradientText from './ui/GradientText'
 import SquaresBackground from './ui/SquaresBackground'
 import { useLanguage } from '../hooks/useLanguage'
 
@@ -101,13 +102,20 @@ const Hero = () => {
                     />
                   </div>
                   
-                  <div className="text-xl lg:text-2xl text-green-400 ml-4">
-                    <TextType 
-                      text={t('hero.title')} 
-                      speed={50} 
-                      delay={catComplete ? 800 : 0}
-                      onComplete={() => setTitleComplete(true)}
-                    />
+                  <div className="ml-4">
+                    <GradientText
+                      colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                      animationSpeed={3}
+                      showBorder={false}
+                      className="text-xl lg:text-2xl font-bold"
+                    >
+                      <TextType 
+                        text={t('hero.title')} 
+                        speed={50} 
+                        delay={catComplete ? 800 : 0}
+                        onComplete={() => setTitleComplete(true)}
+                      />
+                    </GradientText>
                   </div>
 
                   {/* Description with Typewriter Effect */}

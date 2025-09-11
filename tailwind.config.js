@@ -28,7 +28,7 @@ export default {
         'rotateIn': 'rotateIn 0.8s ease-out',
         'pulse-slow': 'pulse 3s ease-in-out infinite',
         'float': 'float 3s ease-in-out infinite',
-        'gradient': 'gradientShift 3s ease infinite',
+        'gradient': 'gradient 8s linear infinite',
         'spin': 'spin 1s linear infinite',
       },
       keyframes: {
@@ -128,6 +128,11 @@ export default {
           '100%': {
             'background-position': '0% 50%',
           },
+        },
+        gradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
         spin: {
           'from': {
