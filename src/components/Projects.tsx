@@ -1,7 +1,6 @@
 import { useState, Suspense } from 'react'
 import { Github, X, Calendar, Users, Globe } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { useTypewriter } from '../hooks/useTypewriter'
 import { useLanguage } from '../hooks/useLanguage'
@@ -205,25 +204,33 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openModal(project)}
             >
-              {/* Project Header */}
-              <div className="h-32 bg-gray-700 relative overflow-hidden border-b border-gray-600">
-                <LazyLoadImage
-                  src={project.image}
-                  alt={project.title}
-                  effect="blur"
-                  placeholderSrc="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzc0MTUxIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM5Q0EzQUYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Qcm9qZWN0IEltYWdlPC90ZXh0Pjwvc3ZnPg=="
-                  className="w-full h-full object-cover"
-                  onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-                    const target = e.target as HTMLImageElement
-                    target.style.display = 'none'
-                    const fallback = target.nextElementSibling as HTMLElement
-                    if (fallback) fallback.style.display = 'flex'
-                  }}
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-700" style={{ display: 'none' }}>
-                  <div className="text-gray-500 text-4xl font-mono">
-                    {project.title.split(' ').map(word => word[0]).join('')}
-                  </div>
+              {/* Project Header - Landing Links */}
+              <div className="h-32 bg-gray-700 relative overflow-hidden border-b border-gray-600 flex items-center justify-center">
+                <div className="flex gap-3">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-3 py-2 bg-gray-800 hover:bg-gray-600 text-gray-300 hover:text-white border border-gray-600 rounded transition-all duration-300 text-sm font-mono"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Globe className="w-4 h-4" />
+                      Live Demo
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-3 py-2 bg-gray-800 hover:bg-gray-600 text-gray-300 hover:text-white border border-gray-600 rounded transition-all duration-300 text-sm font-mono"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Github className="w-4 h-4" />
+                      Source Code
+                    </a>
+                  )}
                 </div>
                 <div className="absolute bottom-4 left-4">
                   <span className="px-2 py-1 bg-gray-600 text-gray-300 text-xs font-mono">
