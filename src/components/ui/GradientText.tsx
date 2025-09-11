@@ -45,12 +45,13 @@ export default function GradientText({
         </div>
       )}
       <div
-        className="inline-block relative z-2 text-transparent bg-cover animate-gradient"
+        className="inline-block relative z-2 bg-cover animate-gradient"
         style={{
           ...gradientStyle,
           backgroundClip: 'text',
           WebkitBackgroundClip: 'text',
-          backgroundSize: '300% 100%'
+          backgroundSize: '300% 100%',
+          color: 'transparent'
         }}
       >
         {children}

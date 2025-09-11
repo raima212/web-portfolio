@@ -49,10 +49,14 @@ export const TextType: React.FC<TextTypeProps> = ({
     }
   }, [currentIndex, text, speed, delay, hasStarted, onComplete])
 
+  if (!displayText && !hasStarted) {
+    return null
+  }
+
   return (
     <span className={className}>
       {displayText}
-      {!isComplete && (
+      {!isComplete && displayText && (
         <span className="animate-pulse">|</span>
       )}
     </span>

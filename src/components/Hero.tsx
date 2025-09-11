@@ -102,20 +102,24 @@ const Hero = () => {
                     />
                   </div>
                   
-                  <div className="ml-4">
-                    <GradientText
-                      colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-                      animationSpeed={3}
-                      showBorder={false}
-                      className="text-xl lg:text-2xl font-bold"
-                    >
+                  <div className="ml-4 text-xl lg:text-2xl font-bold">
+                    {titleComplete ? (
+                      <GradientText
+                        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                        animationSpeed={3}
+                        showBorder={false}
+                        className=""
+                      >
+                        {t('hero.title')}
+                      </GradientText>
+                    ) : (
                       <TextType 
                         text={t('hero.title')} 
                         speed={50} 
                         delay={catComplete ? 800 : 0}
                         onComplete={() => setTitleComplete(true)}
                       />
-                    </GradientText>
+                    )}
                   </div>
 
                   {/* Description with Typewriter Effect */}
