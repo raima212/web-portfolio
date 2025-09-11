@@ -5,12 +5,8 @@ const urlsToCache = [
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
-  // Add other static assets
 ]
 
-// Install event
 self.addEventListener('install', (event) => {
   console.log('Service Worker: Install event')
   event.waitUntil(
@@ -26,7 +22,6 @@ self.addEventListener('install', (event) => {
   self.skipWaiting()
 })
 
-// Activate event
 self.addEventListener('activate', (event) => {
   console.log('Service Worker: Activate event')
   event.waitUntil(
@@ -44,14 +39,11 @@ self.addEventListener('activate', (event) => {
   self.clients.claim()
 })
 
-// Fetch event
 self.addEventListener('fetch', (event) => {
-  // Skip non-GET requests
   if (event.request.method !== 'GET') {
     return
   }
 
-  // Skip external requests
   if (!event.request.url.startsWith(self.location.origin)) {
     return
   }
@@ -59,7 +51,6 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // Return cached version or fetch from network
         if (response) {
           console.log('Service Worker: Serving from cache', event.request.url)
           return response
