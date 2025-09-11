@@ -1,13 +1,11 @@
 import { GraduationCap, Award, Calendar } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
-import { useTypewriter } from '../hooks/useTypewriter'
+import TextType from './ui/TextType'
 import { useLanguage } from '../hooks/useLanguage'
 
 const Education = () => {
   const [ref, isVisible] = useScrollAnimation()
   const { t } = useLanguage()
-  const [commentText, isComplete] = useTypewriter(t('education.description'), 30, isVisible ? 500 : 0)
 
   const educationData = [
     {
@@ -79,16 +77,11 @@ const Education = () => {
             Education
           </h2>
           <p className="text-lg text-green-400 max-w-3xl mx-auto font-mono">
-            {commentText}
-            {!isComplete && (
-              <motion.span 
-                className="text-green-400"
-                animate={{ opacity: [1, 0] }}
-                transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
-              >
-                |
-              </motion.span>
-            )}
+            <TextType 
+              text={t('education.description')} 
+              speed={30} 
+              delay={isVisible ? 500 : 0}
+            />
           </p>
         </div>
 

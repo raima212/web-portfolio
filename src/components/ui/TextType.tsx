@@ -1,8 +1,22 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
-export const useTypewriter = (text: string, speed: number = 50, delay: number = 0): [string, boolean] => {
+interface TextTypeProps {
+  text: string
+  speed?: number
+  delay?: number
+  className?: string
+  onComplete?: () => void
+}
+
+export const TextType: React.FC<TextTypeProps> = ({
+  text,
+  speed = 50,
+  delay = 0,
+  className = '',
+  onComplete
+}) => {
   const [displayText, setDisplayText] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0)   
   const [isComplete, setIsComplete] = useState(false)
   const [hasStarted, setHasStarted] = useState(false)
 
@@ -31,8 +45,18 @@ export const useTypewriter = (text: string, speed: number = 50, delay: number = 
       return () => clearTimeout(timeout)
     } else if (hasStarted && currentIndex >= text.length) {
       setIsComplete(true)
+      onComplete?.()
     }
-  }, [currentIndex, text, speed, delay, hasStarted])
+  }, [currentIndex, text, speed, delay, hasStarted, onComplete])
 
-  return [displayText, isComplete]
+  return (
+    <span className={className}>
+      {displayText}
+      {!isComplete && (
+        <span className="animate-pulse">|</span>
+      )}
+    </span>
+  )
 }
+
+export default TextType

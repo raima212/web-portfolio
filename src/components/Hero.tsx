@@ -1,28 +1,18 @@
+import { useState } from 'react'
 import { Github, Linkedin, Mail, Terminal, ChevronRight } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useTypewriter } from '../hooks/useTypewriter'
+import TextType from './ui/TextType'
 import { useLanguage } from '../hooks/useLanguage'
 
-// Cursor component for typewriter effect
-const Cursor = () => (
-  <motion.span 
-    className="text-green-400"
-    animate={{ opacity: [1, 0] }}
-    transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
-  >
-    |
-  </motion.span>
-)
 
 const Hero = () => {
   const { t } = useLanguage()
   
   // Typewriter animations
-  const [whoamiText, whoamiComplete] = useTypewriter('$ whoami', 30, 500)
-  const [nameText, nameComplete] = useTypewriter(t('hero.name'), 50, whoamiComplete ? 800 : 0)
-  const [catText, catComplete] = useTypewriter('$ cat about.txt', 30, nameComplete ? 1000 : 0)
-  const [titleText, titleComplete] = useTypewriter(t('hero.title'), 50, catComplete ? 800 : 0)
-  const [descriptionText, descriptionComplete] = useTypewriter(t('hero.description'), 20, titleComplete ? 800 : 0)
+  const [whoamiComplete, setWhoamiComplete] = useState(false)
+  const [nameComplete, setNameComplete] = useState(false)
+  const [catComplete, setCatComplete] = useState(false)
+  const [titleComplete, setTitleComplete] = useState(false)
 
   const scrollToProjects = () => {
     const projectsSection = document.querySelector('#projects')
@@ -81,37 +71,58 @@ const Hero = () => {
                 <div className="space-y-4">
                   {/* whoami command */}
                   <div className="flex items-center gap-2">
-                    <span className="text-green-400">{whoamiText}</span>
-                    {!whoamiComplete && <Cursor />}
+                    <TextType 
+                      text="$ whoami" 
+                      speed={30} 
+                      delay={500}
+                      className="text-green-400"
+                      onComplete={() => setWhoamiComplete(true)}
+                    />
                   </div>
                   
                   <div className="text-4xl lg:text-6xl font-bold text-white ml-4">
-                    {nameText}
-                    {!nameComplete && <Cursor />}
+                    <TextType 
+                      text={t('hero.name')} 
+                      speed={50} 
+                      delay={whoamiComplete ? 800 : 0}
+                      onComplete={() => setNameComplete(true)}
+                    />
                   </div>
 
                   {/* cat about.txt command */}
                   <div className="flex items-center gap-2 mt-8">
-                    <span className="text-green-400">{catText}</span>
-                    {!catComplete && <Cursor />}
+                    <TextType 
+                      text="$ cat about.txt" 
+                      speed={30} 
+                      delay={nameComplete ? 1000 : 0}
+                      className="text-green-400"
+                      onComplete={() => setCatComplete(true)}
+                    />
                   </div>
                   
                   <div className="text-xl lg:text-2xl text-green-400 ml-4">
-                    {titleText}
-                    {!titleComplete && <Cursor />}
+                    <TextType 
+                      text={t('hero.title')} 
+                      speed={50} 
+                      delay={catComplete ? 800 : 0}
+                      onComplete={() => setTitleComplete(true)}
+                    />
                   </div>
 
                   {/* Description with Typewriter Effect */}
                   <div className="text-lg text-gray-300 ml-4 max-w-2xl leading-relaxed">
-                    {descriptionText}
-                    {!descriptionComplete && <Cursor />}
+                    <TextType 
+                      text={t('hero.description')} 
+                      speed={20} 
+                      delay={titleComplete ? 800 : 0}
+                    />
                   </div>
 
                   {/* Social Links */}
                   <motion.div 
                     className="flex gap-4 ml-4 mt-6"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: descriptionComplete ? 1 : 0, y: descriptionComplete ? 0 : 20 }}
+                    animate={{ opacity: titleComplete ? 1 : 0, y: titleComplete ? 0 : 20 }}
                     transition={{ duration: 0.5 }}
                   >
                     <a 
@@ -142,7 +153,7 @@ const Hero = () => {
                   <motion.div 
                     className="flex flex-col sm:flex-row gap-4 ml-4 mt-8"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: descriptionComplete ? 1 : 0, y: descriptionComplete ? 0 : 20 }}
+                    animate={{ opacity: titleComplete ? 1 : 0, y: titleComplete ? 0 : 20 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                   >
                     <motion.button 
