@@ -206,7 +206,7 @@ const Projects = () => {
               onClick={() => openModal(project)}
             >
               {/* Project Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col h-full">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-xl font-bold text-white">{project.title}</h3>
                   <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs font-mono rounded">
@@ -245,7 +245,7 @@ const Projects = () => {
                 </div>
 
                 {/* Landing Links */}
-                <div className="flex gap-3 h-10 items-end">
+                <div className="flex gap-3 mt-auto">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
