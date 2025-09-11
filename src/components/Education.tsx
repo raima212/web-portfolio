@@ -96,14 +96,17 @@ const Education = () => {
         <div className="relative">
           {/* Scrollable Cards Container */}
           <div
-            className="flex gap-8 overflow-x-auto scrollbar-hide pb-4"
+            className={`flex gap-8 overflow-x-auto scrollbar-hide pb-4 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {educationData.map((education, index) => (
               <div
                 key={education.id}
-                className="flex-shrink-0 w-96 bg-gray-900 border border-gray-800 rounded p-4 hover:border-gray-600 transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`flex-shrink-0 w-96 bg-gray-900 border border-gray-800 rounded p-4 hover:border-gray-600 transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}
+                style={{ 
+                  animationDelay: `${index * 0.2}s`,
+                  transitionDelay: `${index * 0.1}s`
+                }}
               >
                 
                 <div className="flex items-start gap-4 mb-6">
