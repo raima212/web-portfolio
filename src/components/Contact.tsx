@@ -117,8 +117,8 @@ const Contact = () => {
       <SquaresBackground 
         size={45}
         gap={7}
-        color="#0f172a"
-        opacity={0.03}
+        color="#1f2937"
+        opacity={0.12}
       />
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
