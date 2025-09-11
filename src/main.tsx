@@ -2,6 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './assets/styles/main.css'
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
+console.log('Thanks for visiting my portfolio!')
+
 
 // Register Service Worker
 if ('serviceWorker' in navigator) {
@@ -18,6 +22,7 @@ if ('serviceWorker' in navigator) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <SpeedInsights />
     <App />
   </StrictMode>,
 )
