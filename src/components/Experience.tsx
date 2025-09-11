@@ -74,8 +74,7 @@ const Experience = () => {
           {experiences.map((experience, index) => (
             <div
               key={experience.id}
-              className={`relative mb-12 animate-fadeInUp`}
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="relative mb-12"
             >
               {/* Timeline Line */}
               {index < experiences.length - 1 && (

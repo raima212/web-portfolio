@@ -139,7 +139,7 @@ const Contact = () => {
 
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {/* Contact Information */}
-          <div className="animate-fadeInLeft">
+          <div>
             {/* Terminal-like header */}
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-700 border border-gray-600 rounded-t-lg">
@@ -212,7 +212,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="animate-fadeInRight">
+          <div>
             {/* Terminal-like header */}
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-700 border border-gray-600 rounded-t-lg">

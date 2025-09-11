@@ -58,7 +58,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Content Section */}
-          <div className="flex-1 text-center lg:text-left animate-fadeInRight">
+          <div className="flex-1 text-center lg:text-left">
             {/* Terminal Window */}
             <motion.div 
               className="max-w-4xl mx-auto"

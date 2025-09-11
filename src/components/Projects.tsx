@@ -200,7 +200,7 @@ const Projects = () => {
             {projects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-gray-900 border border-gray-800 rounded overflow-hidden hover:border-gray-600 transition-all duration-300 cursor-pointer animate-fadeInUp"
+              className="bg-gray-900 border border-gray-800 rounded overflow-hidden hover:border-gray-600 transition-all duration-300 cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openModal(project)}
             >

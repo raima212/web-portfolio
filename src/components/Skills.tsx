@@ -173,7 +173,7 @@ const Skills = () => {
               
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name} className="animate-fadeInUp" style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}>
+                  <div key={skill.name}>
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-300 font-mono text-sm">{skill.name}</span>
                       <CountUpNumber 

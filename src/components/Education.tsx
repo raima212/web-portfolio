@@ -101,7 +101,7 @@ const Education = () => {
             {educationData.map((education, index) => (
               <div
                 key={education.id}
-                className="flex-shrink-0 w-96 bg-gray-900 border border-gray-800 rounded p-4 hover:border-gray-600 transition-all duration-300 animate-fadeInUp"
+                className="flex-shrink-0 w-96 bg-gray-900 border border-gray-800 rounded p-4 hover:border-gray-600 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 
