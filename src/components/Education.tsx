@@ -71,7 +71,7 @@ const Education = () => {
       <SquaresBackground 
         speed={0.6}
         squareSize={45}
-        direction="left"
+        direction="down"
         borderColor="#374151"
         hoverFillColor="#111827"
       />

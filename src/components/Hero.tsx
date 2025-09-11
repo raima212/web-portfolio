@@ -38,7 +38,7 @@ const Hero = () => {
       <SquaresBackground 
         speed={0.3}
         squareSize={30}
-        direction="diagonal"
+        direction="down"
         borderColor="#6b7280"
         hoverFillColor="#4b5563"
       />

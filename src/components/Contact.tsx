@@ -117,7 +117,7 @@ const Contact = () => {
       <SquaresBackground 
         speed={0.8}
         squareSize={55}
-        direction="diagonal"
+        direction="down"
         borderColor="#4b5563"
         hoverFillColor="#374151"
       />

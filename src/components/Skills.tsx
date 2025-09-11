@@ -133,7 +133,7 @@ const Skills = () => {
       <SquaresBackground 
         speed={0.4}
         squareSize={35}
-        direction="right"
+        direction="down"
         borderColor="#4b5563"
         hoverFillColor="#374151"
       />

@@ -167,7 +167,7 @@ const Projects = () => {
       <SquaresBackground 
         speed={0.7}
         squareSize={50}
-        direction="up"
+        direction="down"
         borderColor="#111827"
         hoverFillColor="#0f172a"
       />
