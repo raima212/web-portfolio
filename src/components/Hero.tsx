@@ -172,36 +172,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Fixed Scroll Indicator */}
-      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
-        <motion.div 
-          className="flex flex-col items-center gap-2 text-gray-500 text-sm font-mono"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3, duration: 0.5 }}
-        >
-          <motion.span
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            {t('hero.scrollToNavigate')}
-          </motion.span>
-          <div className="w-6 h-10 border border-gray-600 rounded-full flex justify-center relative overflow-hidden">
-            <motion.div 
-              className="w-1 h-3 bg-gray-500 rounded-full"
-              animate={{ 
-                y: [8, 20, 8],
-                opacity: [0.3, 1, 0.3]
-              }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          </div>
-        </motion.div>
-      </div>
     </section>
   )
 }
