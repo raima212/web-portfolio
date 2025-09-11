@@ -42,8 +42,8 @@ export const useAutoScroll = () => {
         const element = document.querySelector(section)
         if (element) {
           const rect = element.getBoundingClientRect()
-          // Section is visible if it's more than 30% in viewport
-          return rect.top <= window.innerHeight * 0.3 && rect.bottom >= window.innerHeight * 0.3
+          // Section is visible if it's more than 50% in viewport
+          return rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5
         }
         return false
       })
