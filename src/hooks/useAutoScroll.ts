@@ -35,7 +35,7 @@ export const useAutoScroll = () => {
       lastScrollTime.current = now
       scrollAccumulator.current = 0
       
-      const sections = ['#hero', '#skills', '#education', '#experience', '#projects', '#contact']
+      const sections = ['#hero', '#skills', '#experience', '#education', '#projects', '#contact']
       
       // Find current section more accurately
       const currentSection = sections.find(section => {
@@ -52,58 +52,22 @@ export const useAutoScroll = () => {
         const currentIndex = sections.indexOf(currentSection)
         let nextIndex: number
         
-        // Check if current section is long (like experience, skills, contact)
-        const currentElement = document.querySelector(currentSection)
-        const isLongSection = currentElement && currentElement.scrollHeight > window.innerHeight * 1.1
-        
-        if (isLongSection) {
-          // For long sections, scroll within the section first
-          const rect = currentElement!.getBoundingClientRect()
-          const isAtTop = rect.top >= -50
-          const isAtBottom = rect.bottom <= window.innerHeight + 50
-          
-          if (e.deltaY > 0 && !isAtBottom) {
-            // Scroll down within the section
-            window.scrollBy({ top: window.innerHeight * 0.8, behavior: 'smooth' })
-          } else if (e.deltaY < 0 && !isAtTop) {
-            // Scroll up within the section
-            window.scrollBy({ top: -window.innerHeight * 0.8, behavior: 'smooth' })
-          } else if (e.deltaY > 0 && isAtBottom) {
-            // Move to next section
-            nextIndex = Math.min(currentIndex + 1, sections.length - 1)
-            const nextSection = sections[nextIndex]
-            const element = document.querySelector(nextSection)
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }
-          } else if (e.deltaY < 0 && isAtTop) {
-            // Move to previous section
-            nextIndex = Math.max(currentIndex - 1, 0)
-            const nextSection = sections[nextIndex]
-            const element = document.querySelector(nextSection)
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }
-          }
+        if (e.deltaY > 0) {
+          // Scroll down
+          nextIndex = Math.min(currentIndex + 1, sections.length - 1)
         } else {
-          // For normal sections, use the original behavior
-          if (e.deltaY > 0) {
-            // Scroll down
-            nextIndex = Math.min(currentIndex + 1, sections.length - 1)
-          } else {
-            // Scroll up
-            nextIndex = Math.max(currentIndex - 1, 0)
-          }
-          
-          const nextSection = sections[nextIndex]
-          const element = document.querySelector(nextSection)
-          
-          if (element && nextIndex !== currentIndex) {
-            element.scrollIntoView({ 
-              behavior: 'smooth',
-              block: 'start'
-            })
-          }
+          // Scroll up
+          nextIndex = Math.max(currentIndex - 1, 0)
+        }
+        
+        const nextSection = sections[nextIndex]
+        const element = document.querySelector(nextSection)
+        
+        if (element && nextIndex !== currentIndex) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          })
         }
       } else {
         // If no current section found, go to first or last based on scroll direction
