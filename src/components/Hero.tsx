@@ -75,7 +75,7 @@ const Hero = () => {
                   <div className="flex items-center gap-2">
                     <TextType 
                       text="$ whoami" 
-                      speed={30} 
+                      speed={20} 
                       delay={500}
                       className="text-green-400"
                       onComplete={() => setWhoamiComplete(true)}
@@ -85,7 +85,7 @@ const Hero = () => {
                   <div className="text-4xl lg:text-6xl font-bold text-white ml-4">
                     <TextType 
                       text={t('hero.name')} 
-                      speed={50} 
+                      speed={30} 
                       delay={whoamiComplete ? 800 : 0}
                       onComplete={() => setNameComplete(true)}
                     />
@@ -95,7 +95,7 @@ const Hero = () => {
                   <div className="flex items-center gap-2 mt-8">
                     <TextType 
                       text="$ cat about.txt" 
-                      speed={30} 
+                      speed={20} 
                       delay={nameComplete ? 1000 : 0}
                       className="text-green-400"
                       onComplete={() => setCatComplete(true)}
@@ -103,30 +103,26 @@ const Hero = () => {
                   </div>
                   
                   <div className="ml-4 text-xl lg:text-2xl font-bold">
-                    {titleComplete ? (
-                      <GradientText
-                        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-                        animationSpeed={3}
-                        showBorder={false}
-                        className=""
-                      >
-                        {t('hero.title')}
-                      </GradientText>
-                    ) : (
+                    <GradientText
+                      colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                      animationSpeed={3}
+                      showBorder={false}
+                      className=""
+                    >
                       <TextType 
                         text={t('hero.title')} 
-                        speed={50} 
+                        speed={30} 
                         delay={catComplete ? 800 : 0}
                         onComplete={() => setTitleComplete(true)}
                       />
-                    )}
+                    </GradientText>
                   </div>
 
                   {/* Description with Typewriter Effect */}
                   <div className="text-lg text-gray-300 ml-4 max-w-2xl leading-relaxed">
                     <TextType 
                       text={t('hero.description')} 
-                      speed={20} 
+                      speed={15} 
                       delay={titleComplete ? 800 : 0}
                     />
                   </div>
