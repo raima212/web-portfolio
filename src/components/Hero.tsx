@@ -35,10 +35,11 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-900 relative overflow-hidden pt-24 pb-16">
       {/* Squares Background Pattern */}
       <SquaresBackground 
-        size={20}
-        gap={2}
-        color="#6b7280"
-        opacity={0.1}
+        speed={0.3}
+        squareSize={30}
+        direction="diagonal"
+        borderColor="#6b7280"
+        hoverFillColor="#4b5563"
       />
       
       {/* Floating Elements */}

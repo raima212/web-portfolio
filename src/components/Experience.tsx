@@ -47,10 +47,11 @@ const Experience = () => {
   return (
     <section ref={ref} id="experience" className="py-24 bg-gray-800 relative">
       <SquaresBackground 
-        size={30}
-        gap={4}
-        color="#374151"
-        opacity={0.08}
+        speed={0.5}
+        squareSize={40}
+        direction="down"
+        borderColor="#374151"
+        hoverFillColor="#1f2937"
       />
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

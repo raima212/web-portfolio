@@ -115,10 +115,11 @@ const Contact = () => {
   return (
     <section ref={ref} id="contact" className="py-24 pb-32 bg-gray-800 relative">
       <SquaresBackground 
-        size={45}
-        gap={7}
-        color="#1f2937"
-        opacity={0.12}
+        speed={0.8}
+        squareSize={55}
+        direction="diagonal"
+        borderColor="#1f2937"
+        hoverFillColor="#0f172a"
       />
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

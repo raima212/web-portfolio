@@ -131,10 +131,11 @@ const Skills = () => {
   return (
     <section ref={ref} id="skills" className="py-24 bg-gray-800 relative">
       <SquaresBackground 
-        size={25}
-        gap={3}
-        color="#4b5563"
-        opacity={0.05}
+        speed={0.4}
+        squareSize={35}
+        direction="right"
+        borderColor="#4b5563"
+        hoverFillColor="#374151"
       />
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

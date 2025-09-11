@@ -165,10 +165,11 @@ const Projects = () => {
   return (
     <section ref={ref} id="projects" className="py-24 bg-gray-800 relative">
       <SquaresBackground 
-        size={40}
-        gap={6}
-        color="#111827"
-        opacity={0.04}
+        speed={0.7}
+        squareSize={50}
+        direction="up"
+        borderColor="#111827"
+        hoverFillColor="#0f172a"
       />
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
