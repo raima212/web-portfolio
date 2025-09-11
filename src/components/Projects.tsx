@@ -204,8 +204,46 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openModal(project)}
             >
-              {/* Project Header - Landing Links */}
-              <div className="h-32 bg-gray-700 relative overflow-hidden border-b border-gray-600 flex items-center justify-center">
+              {/* Project Content */}
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                  <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs font-mono rounded">
+                    {project.category}
+                  </span>
+                </div>
+                <p className="text-gray-400 mb-4 line-clamp-2">{project.description}</p>
+                
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-2 py-1 bg-gray-800 text-gray-400 rounded text-xs"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs">
+                      +{project.technologies.length - 3}
+                    </span>
+                  )}
+                </div>
+
+                {/* Project Info */}
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    <span>{project.period}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Users className="w-4 h-4" />
+                    <span>{project.teamSize}</span>
+                  </div>
+                </div>
+
+                {/* Landing Links */}
                 <div className="flex gap-3">
                   {project.liveUrl && (
                     <a
@@ -231,46 +269,6 @@ const Projects = () => {
                       Source Code
                     </a>
                   )}
-                </div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="px-2 py-1 bg-gray-600 text-gray-300 text-xs font-mono">
-                    {project.category}
-                  </span>
-                </div>
-              </div>
-
-              {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4 line-clamp-2">{project.description}</p>
-                
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-2 py-1 bg-gray-800 text-gray-400 rounded text-xs"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs">
-                      +{project.technologies.length - 3}
-                    </span>
-                  )}
-                </div>
-
-                {/* Project Info */}
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    <span>{project.period}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    <span>{project.teamSize}</span>
-                  </div>
                 </div>
               </div>
             </div>
