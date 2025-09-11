@@ -35,35 +35,12 @@ const SquaresBackground: React.FC<SquaresBackgroundProps> = ({
     const canvas = canvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d')
-    
-    if (ctx) {
-      // Enable anti-aliasing and smoothing
-      ctx.imageSmoothingEnabled = true
-      ctx.imageSmoothingQuality = 'high'
-      ctx.lineCap = 'round'
-      ctx.lineJoin = 'round'
-      ctx.lineWidth = 0.5
-    }
 
     const resizeCanvas = () => {
-      const devicePixelRatio = window.devicePixelRatio || 1
-      const rect = canvas.getBoundingClientRect()
-      
-      // Set actual size in memory (scaled to account for extra pixel density)
-      canvas.width = rect.width * devicePixelRatio
-      canvas.height = rect.height * devicePixelRatio
-      
-      // Scale the drawing context so everything draws at the correct size
-      if (ctx) {
-        ctx.scale(devicePixelRatio, devicePixelRatio)
-      }
-      
-      // Set display size (CSS pixels)
-      canvas.style.width = rect.width + 'px'
-      canvas.style.height = rect.height + 'px'
-      
-      numSquaresX.current = Math.ceil(rect.width / squareSize) + 2
-      numSquaresY.current = Math.ceil(rect.height / squareSize) + 2
+      canvas.width = canvas.offsetWidth
+      canvas.height = canvas.offsetHeight
+      numSquaresX.current = Math.ceil(canvas.width / squareSize) + 1
+      numSquaresY.current = Math.ceil(canvas.height / squareSize) + 1
     }
 
     window.addEventListener('resize', resizeCanvas)
@@ -72,24 +49,16 @@ const SquaresBackground: React.FC<SquaresBackgroundProps> = ({
     const drawGrid = () => {
       if (!ctx) return
 
-      const rect = canvas.getBoundingClientRect()
-      ctx.clearRect(0, 0, rect.width, rect.height)
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-      // Calculate smooth offset with sub-pixel precision
-      const smoothOffsetX = gridOffset.current.x % squareSize
-      const smoothOffsetY = gridOffset.current.y % squareSize
+      const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize
+      const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize
 
-      // Calculate starting positions with proper offset
-      const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize - smoothOffsetX
-      const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize - smoothOffsetY
+      for (let x = startX; x < canvas.width + squareSize; x += squareSize) {
+        for (let y = startY; y < canvas.height + squareSize; y += squareSize) {
+          const squareX = x - (gridOffset.current.x % squareSize)
+          const squareY = y - (gridOffset.current.y % squareSize)
 
-      // Draw grid with anti-aliasing
-      for (let x = startX; x < rect.width + squareSize; x += squareSize) {
-        for (let y = startY; y < rect.height + squareSize; y += squareSize) {
-          const squareX = x
-          const squareY = y
-
-          // Check for hovered square
           if (
             hoveredSquareRef.current &&
             Math.floor((x - startX) / squareSize) === hoveredSquareRef.current.x &&
@@ -99,54 +68,44 @@ const SquaresBackground: React.FC<SquaresBackgroundProps> = ({
             ctx.fillRect(squareX, squareY, squareSize, squareSize)
           }
 
-          // Draw grid lines with smooth rendering
           ctx.strokeStyle = borderColor
-          ctx.strokeRect(squareX + 0.25, squareY + 0.25, squareSize - 0.5, squareSize - 0.5)
+          ctx.strokeRect(squareX, squareY, squareSize, squareSize)
         }
       }
 
-      // Apply subtle gradient overlay
       const gradient = ctx.createRadialGradient(
-        rect.width / 2,
-        rect.height / 2,
+        canvas.width / 2,
+        canvas.height / 2,
         0,
-        rect.width / 2,
-        rect.height / 2,
-        Math.sqrt(rect.width ** 2 + rect.height ** 2) / 2
+        canvas.width / 2,
+        canvas.height / 2,
+        Math.sqrt(canvas.width ** 2 + canvas.height ** 2) / 2
       )
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0)')
-      gradient.addColorStop(1, 'rgba(6, 0, 16, 0.3)')
+      gradient.addColorStop(1, '#060010')
 
       ctx.fillStyle = gradient
-      ctx.fillRect(0, 0, rect.width, rect.height)
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
     }
 
     const updateAnimation = () => {
       const effectiveSpeed = Math.max(speed, 0.1)
-      
-      // Use smooth animation with proper modulo handling
       switch (direction) {
         case 'right':
-          gridOffset.current.x -= effectiveSpeed
-          if (gridOffset.current.x < 0) gridOffset.current.x += squareSize
+          gridOffset.current.x = (gridOffset.current.x - effectiveSpeed + squareSize) % squareSize
           break
         case 'left':
-          gridOffset.current.x += effectiveSpeed
-          if (gridOffset.current.x >= squareSize) gridOffset.current.x -= squareSize
+          gridOffset.current.x = (gridOffset.current.x + effectiveSpeed + squareSize) % squareSize
           break
         case 'up':
-          gridOffset.current.y += effectiveSpeed
-          if (gridOffset.current.y >= squareSize) gridOffset.current.y -= squareSize
+          gridOffset.current.y = (gridOffset.current.y + effectiveSpeed + squareSize) % squareSize
           break
         case 'down':
-          gridOffset.current.y -= effectiveSpeed
-          if (gridOffset.current.y < 0) gridOffset.current.y += squareSize
+          gridOffset.current.y = (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize
           break
         case 'diagonal':
-          gridOffset.current.x -= effectiveSpeed
-          gridOffset.current.y -= effectiveSpeed
-          if (gridOffset.current.x < 0) gridOffset.current.x += squareSize
-          if (gridOffset.current.y < 0) gridOffset.current.y += squareSize
+          gridOffset.current.x = (gridOffset.current.x - effectiveSpeed + squareSize) % squareSize
+          gridOffset.current.y = (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize
           break
         default:
           break
@@ -161,11 +120,8 @@ const SquaresBackground: React.FC<SquaresBackgroundProps> = ({
       const mouseX = event.clientX - rect.left
       const mouseY = event.clientY - rect.top
 
-      // Calculate smooth offset
-      const smoothOffsetX = gridOffset.current.x % squareSize
-      const smoothOffsetY = gridOffset.current.y % squareSize
-      const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize - smoothOffsetX
-      const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize - smoothOffsetY
+      const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize
+      const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize
 
       const hoveredSquareX = Math.floor((mouseX + gridOffset.current.x - startX) / squareSize)
       const hoveredSquareY = Math.floor((mouseY + gridOffset.current.y - startY) / squareSize)
