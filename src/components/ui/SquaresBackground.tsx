@@ -37,7 +37,6 @@ const SquaresBackground: React.FC<SquaresBackgroundProps> = ({
     const ctx = canvas.getContext('2d')
     
     if (ctx) {
-      // smooth rendering için
       ctx.lineWidth = 0.5
       ctx.lineCap = 'round'
     }
@@ -75,7 +74,6 @@ const SquaresBackground: React.FC<SquaresBackgroundProps> = ({
           }
 
           ctx.strokeStyle = borderColor
-          // grid çizgilerini daha smooth yap
           ctx.strokeRect(squareX + 0.25, squareY + 0.25, squareSize - 0.5, squareSize - 0.5)
         }
       }
@@ -96,29 +94,28 @@ const SquaresBackground: React.FC<SquaresBackgroundProps> = ({
     }
 
     const updateAnimation = () => {
-      const effectiveSpeed = Math.max(speed, 0.1)
+      const animSpeed = Math.max(speed, 0.1)
       
-      // daha smooth animasyon için
       switch (direction) {
         case 'right':
-          gridOffset.current.x -= effectiveSpeed
+          gridOffset.current.x -= animSpeed
           if (gridOffset.current.x < 0) gridOffset.current.x += squareSize
           break
         case 'left':
-          gridOffset.current.x += effectiveSpeed
+          gridOffset.current.x += animSpeed
           if (gridOffset.current.x >= squareSize) gridOffset.current.x -= squareSize
           break
         case 'up':
-          gridOffset.current.y += effectiveSpeed
+          gridOffset.current.y += animSpeed
           if (gridOffset.current.y >= squareSize) gridOffset.current.y -= squareSize
           break
         case 'down':
-          gridOffset.current.y -= effectiveSpeed
+          gridOffset.current.y -= animSpeed
           if (gridOffset.current.y < 0) gridOffset.current.y += squareSize
           break
         case 'diagonal':
-          gridOffset.current.x -= effectiveSpeed
-          gridOffset.current.y -= effectiveSpeed
+          gridOffset.current.x -= animSpeed
+          gridOffset.current.y -= animSpeed
           if (gridOffset.current.x < 0) gridOffset.current.x += squareSize
           if (gridOffset.current.y < 0) gridOffset.current.y += squareSize
           break
