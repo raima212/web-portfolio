@@ -34,5 +34,5 @@ export const useTypewriter = (text: string, speed: number = 50, delay: number = 
     }
   }, [currentIndex, text, speed, delay, hasStarted])
 
-  return { displayText, isComplete }
+  return [displayText, isComplete] as const
 }
