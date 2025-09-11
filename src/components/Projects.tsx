@@ -125,33 +125,43 @@ const Projects = () => {
     {
       id: 3,
       title: 'Web Portfolio',
-      description: 'My personal website built with Next.js, TypeScript, and Tailwind CSS.',
-      longDescription: 'My personal website built with Next.js, TypeScript, and Tailwind CSS. It is a responsive website that is easy to use and navigate.',
+      description: 'Modern Portfolio Website (React + TypeScript)',
+      longDescription: 'A high-performance portfolio website built with React, TypeScript, and Tailwind CSS. Features VS Code-inspired design, animated backgrounds, and optimized performance with 92+ Lighthouse score. Includes PWA capabilities, SEO optimization, and responsive design.',
       image: '/api/placeholder/400/300',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Lucide React', 'Framer Motion', 'React Lazy Load Image Component' ],
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Lucide React', 'PWA', 'SEO', 'Performance Optimization', 'Canvas API', 'Intersection Observer', 'Service Worker', 'Vercel'],
       category: 'Frontend',
-      period: '2025 - 2025',
+      period: '2025',
       teamSize: '1 Developer',
       features: [
-        'Responsive design',
-        'Project modal',
-        'Typewriter effect',
-        'Scroll animation',
+        'VS Code-inspired terminal interface with typewriter effects',
+        'Animated canvas background with squares pattern',
+        'Responsive design with mobile-first approach',
+        'Performance optimized (92+ Lighthouse score)',
+        'PWA capabilities with service worker',
+        'SEO optimized with meta tags and structured data',
+        'Smooth scroll animations and micro-interactions',
+        'Multi-language support (Turkish/English)',
+        'Accessibility compliant with keyboard navigation',
+        'Modern component architecture with custom hooks'
       ],
       challenges: [
-        'Canvas animation performance',
-        'Responsive design complexity',
-        'Smooth scrolling implementation'
+        'Canvas animation performance optimization',
+        'Layout shift prevention and CLS optimization',
+        'Bundle size optimization and code splitting',
+        'Mobile sidebar UX implementation',
+        'Performance monitoring and optimization'
       ],
       results: [
-        'Fast loading times',
-        'Mobile responsive design',
-        'Smooth animations',
-        'Accessibility compliant'
+        '92+ Lighthouse Performance Score',
+        '1.1s LCP (Largest Contentful Paint)',
+        '0.03 CLS (Cumulative Layout Shift)',
+        '0ms TBT (Total Blocking Time)',
+        '100 Best Practices & SEO Score',
+        'Fully responsive and accessible'
       ],
       liveUrl: 'https://melihilker.com',
       githubUrl: 'https://github.com/MelihIlker/personal-website',
-      color: 'from-purple-600 to-purple-800'
+      color: 'from-indigo-600 to-indigo-800'
     },
   ]
 
