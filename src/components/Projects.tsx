@@ -245,7 +245,7 @@ const Projects = () => {
                 </div>
 
                 {/* Landing Links */}
-                <div className="flex gap-3">
+                <div className="flex gap-3 h-10 items-end">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
