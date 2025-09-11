@@ -19,7 +19,7 @@ function App() {
           <ErrorBoundary>
             <Navbar onCollapseChange={setIsCollapsed} />
           </ErrorBoundary>
-          <div className={`transition-all duration-300 ${
+          <div className={`transition-all duration-300 pt-16 md:pt-0 ${
             isCollapsed ? 'md:ml-12' : 'md:ml-64'
           }`}>
             <ErrorBoundary>

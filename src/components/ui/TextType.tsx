@@ -55,7 +55,6 @@ export const TextType: React.FC<TextTypeProps> = ({
       {!isComplete && displayText && (
         <span className="animate-pulse">|</span>
       )}
-      {/* Invisible placeholder to prevent layout shift */}
       {!displayText && !hasStarted && (
         <span style={{ visibility: 'hidden' }}>{text}</span>
       )}
