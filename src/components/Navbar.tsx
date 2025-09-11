@@ -116,7 +116,9 @@ const Sidebar = ({ onCollapseChange }: SidebarProps) => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileOpen(!isMobileOpen)}
-        className="md:hidden fixed top-4 left-4 z-[60] p-2 bg-gray-800 border border-gray-600 rounded text-gray-300 hover:text-white transition-colors duration-200"
+        className={`md:hidden fixed top-4 left-4 z-[60] p-2 bg-gray-800 border border-gray-600 rounded text-gray-300 hover:text-white transition-all duration-200 ${
+          isMobileOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
       >
         <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${isMobileOpen ? 'rotate-180' : ''}`} />
       </button>
@@ -124,7 +126,9 @@ const Sidebar = ({ onCollapseChange }: SidebarProps) => {
       {/* Mobile Language Toggle Button */}
       <button
         onClick={() => setLanguage(language === 'tr' ? 'en' : 'tr')}
-        className="md:hidden fixed top-4 left-16 z-[60] p-2 bg-gray-800 border border-gray-600 rounded text-gray-300 hover:text-white transition-colors duration-200"
+        className={`md:hidden fixed top-4 left-16 z-[60] p-2 bg-gray-800 border border-gray-600 rounded text-gray-300 hover:text-white transition-all duration-200 ${
+          isMobileOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
         title={language === 'tr' ? 'Switch to English' : 'Türkçe\'ye Geç'}
       >
         <Globe className="w-4 h-4" />
