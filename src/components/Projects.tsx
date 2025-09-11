@@ -89,36 +89,38 @@ const Projects = () => {
     {
       id: 2,
       title: 'NullSect Development',
-      description: 'Task management app for team collaboration',
-      longDescription: 'Project management app with kanban board and gantt chart. Has real-time collaboration and reporting features.',
+      description: 'FiveM Script Development Platform (Full-Stack)',
+      longDescription: 'A professional platform providing custom script development, modification, and technical support services for FiveM server owners. Built with React.js, TypeScript, and Tailwind CSS. Features responsive design with glass morphism effects and dark theme optimized for gaming community.',
       image: '/api/placeholder/400/300',
-      technologies: ['Vue.js', 'Express.js', 'PostgreSQL', 'Socket.io', 'Redis'],
+      technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Vercel', 'GitHub', 'Responsive Design', 'SEO Optimization', 'Glass Morphism', 'Dark Theme', 'Component Architecture', 'Performance Optimization', 'Accessibility'],
       category: 'Full Stack',
-      period: '2023',
-      teamSize: '3 Developer',
+      period: '2024',
+      teamSize: '1 Developer',
       features: [
-        'Kanban board',
-        'Gantt chart',
-        'Real-time collaboration',
-        'File sharing',
-        'Time tracking',
-        'Reporting system'
+        'Responsive design with glass morphism effects and dark theme optimized for gaming community',
+        'Multi-page structure including services showcase, product portfolio, and company information',
+        'Interactive animations with hover effects and smooth transitions',
+        'Performance optimization with component-based architecture and type-safe development',
+        'SEO optimized with semantic HTML structure and accessibility compliance',
+        'Professional service platform for the gaming industry',
+        'Custom script development and modification services',
+        'Technical support services for FiveM server owners'
       ],
       challenges: [
-        'Real-time synchronization',
-        'Complex UI/UX design',
-        'Data consistency',
-        'Performance optimization'
+        'Creating gaming-optimized UI/UX design',
+        'Implementing glass morphism effects',
+        'Performance optimization for gaming community',
+        'SEO and accessibility compliance'
       ],
       results: [
-        '50% productivity increase',
-        '100+ active teams',
-        'Real-time updates',
-        'User-friendly interface'
+        'Professional gaming platform',
+        'Modern React.js development showcase',
+        'UI/UX design principles demonstration',
+        'SEO and accessibility compliant'
       ],
-      liveUrl: 'https://taskmanager-demo.com',
-      githubUrl: 'https://github.com/MelihIlker/taskmanager',
-      color: 'from-green-600 to-green-800'
+      liveUrl: 'https://nullsect.vercel.app',
+      githubUrl: 'https://github.com/MelihIlker/nullsect',
+      color: 'from-purple-600 to-purple-800'
     },
     {
       id: 3,
