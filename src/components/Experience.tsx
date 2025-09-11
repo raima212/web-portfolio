@@ -11,6 +11,23 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
+      company: 'Panasonic Electric Works Turkey',
+      position: 'Software Internship',
+      period: '2023 - 2024',
+      location: 'İstanbul, Türkiye',
+      type: 'Internship',
+      description: 'Developed company-specific asset inventory management system and user-friendly department statistics reporting websites. Built web applications for scheduled company acivities and live currency exchange rates. Created custom admin panel applications tailored to internal needs. Monitored Oracle databases and performed regular Jira reporting while contributing to practical, user-oriented software solutions.',
+      achievements: [
+        'Developed company-specific asset inventory management system and user-friendly department statistics reporting websites.',
+        'Built web applications for scheduled company acivities and live currency exchange rates.',
+        'Created custom admin panel applications tailored to internal needs.',
+        'Monitored Oracle databases and performed regular Jira reporting while contributing to practical, user-oriented software solutions.'
+      ],
+      technologies: ['.NET Framework', 'ASP.NET', '.NET MVC', 'SQL Server', 'Oracle', 'Jira', 'C#', 'JavaScript', 'HTML', 'CSS'],
+      color: 'from-blue-600 to-blue-800'
+    },
+    {
+      id: 2,
       company: 'Freelance Full Stack Developer',
       position: 'Full Stack Developer',
       period: '2016 - Present',
@@ -22,27 +39,10 @@ const Experience = () => {
         'Specialized in building complex multi-user systems that incorporate secure user authentication, real-time data synchronization, and interactive user dashboards.',
         'Effectively integrated various cloud services including AWS S3 for file storage and Supabase for backend functionality, ensuring scalable and maintainable solutions.',
         'Consistently maintained a 99% client satisfaction rate by delivering projects on time, maintaining clear communication throughout development cycles, and providing comprehensive technical support.'
-    ],
+      ],
       technologies: ['React', 'TypeScript', 'Next.js', 'Node.js', 'Express.js', 'Vite', 'AWS S3', 'Supabase', 'MongoDB', 'PostgreSQL', 'Micsrofot SQL Server', 'MySQL', 'HeidiSQL', 'SQLite', 'Tailwind CSS',  'JavaScript', 'Java', 'Spring Boot', 'Git', 'HTML', 'CSS', 'REST APIs', 'GraphQL', 'API Documentation', 'API Security', 'API Performance'],
       color: 'from-green-600 to-green-800'
     },
-    {
-        id: 2,
-        company: 'Panasonic Electric Works Turkey',
-        position: 'Software Internship',
-        period: '2023 - 2024',
-        location: 'İstanbul, Türkiye',
-        type: 'Internship',
-        description: 'Developed company-specific asset inventory management system and user-friendly department statistics reporting websites. Built web applications for scheduled company acivities and live currency exchange rates. Created custom admin panel applications tailored to internal needs. Monitored Oracle databases and performed regular Jira reporting while contributing to practical, user-oriented software solutions.',
-        achievements: [
-          'Developed company-specific asset inventory management system and user-friendly department statistics reporting websites.',
-          'Built web applications for scheduled company acivities and live currency exchange rates.',
-          'Created custom admin panel applications tailored to internal needs.',
-          'Monitored Oracle databases and performed regular Jira reporting while contributing to practical, user-oriented software solutions.'
-        ],
-        technologies: ['.NET Framework', 'ASP.NET', '.NET MVC', 'SQL Server', 'Oracle', 'Jira', 'C#', 'JavaScript', 'HTML', 'CSS'],
-        color: 'from-blue-600 to-blue-800'
-      },
   ]
 
   return (
