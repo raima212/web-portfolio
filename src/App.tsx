@@ -6,12 +6,10 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import ErrorBoundary from './components/ErrorBoundary'
-import { useAutoScroll } from './hooks/useAutoScroll'
 import { LanguageProvider } from './contexts/LanguageContext.tsx'
 import { useState } from 'react'
 
 function App() {
-  useAutoScroll()
   const [isCollapsed, setIsCollapsed] = useState(false)
   
   return (
