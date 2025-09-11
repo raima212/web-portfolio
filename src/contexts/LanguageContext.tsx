@@ -70,7 +70,7 @@ const translations = {
     
     // Footer
     'footer.version': 'Portfolio v1.0.0 - Modern web teknolojileri ile geliştirildi',
-    'footer.copyright': '© 2024 Melih Ilker. Tüm hakları saklıdır.',
+    'footer.copyright': '© 2025 Melih Ilker. Tüm hakları saklıdır.',
     'footer.technologies': 'React • TypeScript • Tailwind CSS • Framer Motion • Vite',
     'footer.thanks': '$ echo "Thanks for visiting my portfolio!"'
   },
@@ -140,7 +140,7 @@ const translations = {
     
     // Footer
     'footer.version': 'Portfolio v1.0.0 - Built with modern web technologies',
-    'footer.copyright': '© 2024 Melih Ilker. All rights reserved.',
+    'footer.copyright': '© 2025 Melih Ilker. All rights reserved.',
     'footer.technologies': 'React • TypeScript • Tailwind CSS • Framer Motion • Vite',
     'footer.thanks': '$ echo "Thanks for visiting my portfolio!"'
   }

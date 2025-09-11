@@ -201,7 +201,7 @@ const Contact = () => {
                   <a 
                     href="/cv.pdf" 
                     download="MelihIlker-FullStack-Developer-CV.pdf"
-                    className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white text-sm font-mono rounded border border-gray-600 transition-all duration-300 hover:scale-105"
+                    className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white text-sm font-mono rounded border border-gray-600 transition-all duration-300"
                   >
                     <Download className="w-4 h-4" />
                     {t('contact.downloadCVButton')}
