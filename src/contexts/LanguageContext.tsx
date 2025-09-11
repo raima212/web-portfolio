@@ -57,7 +57,7 @@ const translations = {
     
     // Contact Section
     'contact.title': 'İletişim',
-    'contact.description': '// Projeleriniz hakkında konuşmak için iletişime geçin',
+    'contact.description': 'Projeleriniz hakkında konuşmak için iletişime geçin',
     'contact.location': 'Konum',
     'contact.locationValue': 'İstanbul, Türkiye',
     'contact.socialLinks': 'Sosyal Medya',

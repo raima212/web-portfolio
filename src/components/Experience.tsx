@@ -32,12 +32,12 @@ const Experience = () => {
       period: '2016 - Present',
       location: 'Istanbul, Türkiye',
       type: 'Full-time',
-      description: 'Successfully designed and developed more than 10 web applications utilizing modern JavaScript frameworks including React.js, Next.js, and Vite for enhanced development performance. Specialized in building complex multi-user systems that incorporate secure user authentication, real-time data synchronization, and interactive user dashboards. Effectively integrated various cloud services including AWS S3 for file storage and Supabase for backend functionality, ensuring scalable and maintainable solutions. Consistently maintained a 99% client satisfaction rate by delivering projects on time, maintaining clear communication throughout development cycles, and providing comprehensive technical support.',
+      description: 'Built over 10 web apps using React, Next.js, and Vite. Work on multi-user systems with auth, real-time updates, and dashboards. Use AWS S3 and Supabase for backend. Keep 99% client satisfaction.',
       achievements: [
-        'Successfully designed and developed more than 10 web applications utilizing modern JavaScript frameworks including React.js, Next.js, and Vite for enhanced development performance.',
-        'Specialized in building complex multi-user systems that incorporate secure user authentication, real-time data synchronization, and interactive user dashboards.',
-        'Effectively integrated various cloud services including AWS S3 for file storage and Supabase for backend functionality, ensuring scalable and maintainable solutions.',
-        'Consistently maintained a 99% client satisfaction rate by delivering projects on time, maintaining clear communication throughout development cycles, and providing comprehensive technical support.'
+        'Built 10+ web apps with React, Next.js, and Vite',
+        'Made multi-user systems with auth and real-time updates',
+        'Used AWS S3 and Supabase for backend stuff',
+        'Keep 99% client satisfaction with on-time delivery'
       ],
       technologies: ['React', 'TypeScript', 'Next.js', 'Node.js', 'Express.js', 'Vite', 'AWS S3', 'Supabase', 'MongoDB', 'PostgreSQL', 'Micsrofot SQL Server', 'MySQL', 'HeidiSQL', 'SQLite', 'Tailwind CSS',  'JavaScript', 'Java', 'Spring Boot', 'Git', 'HTML', 'CSS', 'REST APIs', 'GraphQL', 'API Documentation', 'API Security', 'API Performance'],
       color: 'from-green-600 to-green-800'
