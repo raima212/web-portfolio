@@ -101,7 +101,6 @@ self.addEventListener('sync', (event) => {
   }
 })
 
-// Push notifications
 self.addEventListener('push', (event) => {
   console.log('Service Worker: Push received')
   
@@ -133,7 +132,6 @@ self.addEventListener('push', (event) => {
   )
 })
 
-// Notification click
 self.addEventListener('notificationclick', (event) => {
   console.log('Service Worker: Notification click', event.action)
   
@@ -146,7 +144,6 @@ self.addEventListener('notificationclick', (event) => {
   }
 })
 
-// Message handling
 self.addEventListener('message', (event) => {
   console.log('Service Worker: Message received', event.data)
   
@@ -155,18 +152,14 @@ self.addEventListener('message', (event) => {
   }
 })
 
-// Helper functions
 async function handleOfflineFormSubmissions() {
   try {
-    // Get offline form data from IndexedDB
     const offlineForms = await getOfflineForms()
     
     for (const formData of offlineForms) {
       try {
-        // Send form data
         await sendFormData(formData)
         
-        // Remove from offline storage
         await removeOfflineForm(formData.id)
       } catch (error) {
         console.error('Failed to send offline form:', error)
@@ -178,16 +171,13 @@ async function handleOfflineFormSubmissions() {
 }
 
 async function getOfflineForms() {
-  // Implementation for getting offline forms from IndexedDB
   return []
 }
 
 async function sendFormData(formData) {
-  // Implementation for sending form data
   console.log('Sending offline form data:', formData)
 }
 
 async function removeOfflineForm(id) {
-  // Implementation for removing form from offline storage
   console.log('Removing offline form:', id)
 }
