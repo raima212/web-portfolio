@@ -26,7 +26,7 @@ const Sidebar = ({ onCollapseChange }: SidebarProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'skills', 'education', 'experience', 'projects', 'contact']
+      const sections = ['hero', 'skills', 'experience', 'education', 'projects', 'contact']
       const currentSection = sections.find(section => {
         const element = document.querySelector(`#${section}`)
         if (element) {
@@ -62,20 +62,20 @@ const Sidebar = ({ onCollapseChange }: SidebarProps) => {
       translationKey: 'nav.skills'
     },
     { 
-      name: 'education', 
-      href: '#education', 
-      icon: GraduationCap,
-      type: 'file',
-      extension: '.md',
-      translationKey: 'nav.education'
-    },
-    { 
       name: 'experience', 
       href: '#experience', 
       icon: Briefcase,
       type: 'file',
       extension: '.json',
       translationKey: 'nav.experience'
+    },
+    { 
+      name: 'education', 
+      href: '#education', 
+      icon: GraduationCap,
+      type: 'file',
+      extension: '.md',
+      translationKey: 'nav.education'
     },
     { 
       name: 'projects', 

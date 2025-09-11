@@ -31,10 +31,10 @@ function App() {
               <Skills />
             </ErrorBoundary>
             <ErrorBoundary>
-              <Education />
+              <Experience />
             </ErrorBoundary>
             <ErrorBoundary>
-              <Experience />
+              <Education />
             </ErrorBoundary>
             <ErrorBoundary>
               <Projects />
