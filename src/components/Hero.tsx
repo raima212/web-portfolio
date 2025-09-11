@@ -41,7 +41,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-900 relative overflow-hidden pt-16">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-900 relative overflow-hidden pt-24 pb-16">
       {/* Technical Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

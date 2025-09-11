@@ -164,7 +164,7 @@ const Projects = () => {
   }
 
   return (
-    <section ref={ref} id="projects" className="py-20 bg-gray-800 min-h-screen flex items-center">
+    <section ref={ref} id="projects" className="py-24 bg-gray-800 min-h-screen flex items-center">
       <div className="container mx-auto px-6">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg mb-6">
