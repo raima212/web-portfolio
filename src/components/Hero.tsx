@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Github, Linkedin, Mail, Terminal, ChevronRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import TextType from './ui/TextType'
+import SquaresBackground from './ui/SquaresBackground'
 import { useLanguage } from '../hooks/useLanguage'
 
 
@@ -32,18 +33,17 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-900 relative overflow-hidden pt-24 pb-16">
-      {/* Technical Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            linear-gradient(90deg, transparent 98%, #6b7280 100%),
-            linear-gradient(0deg, transparent 98%, #6b7280 100%)
-          `,
-          backgroundSize: '50px 50px'
-        }}></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-      </div>
+      {/* Squares Background Pattern */}
+      <SquaresBackground 
+        size={20}
+        gap={2}
+        color="#6b7280"
+        opacity={0.1}
+      />
+      
+      {/* Floating Elements */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">

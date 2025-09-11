@@ -1,6 +1,7 @@
 import { GraduationCap, Award, Calendar } from 'lucide-react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import TextType from './ui/TextType'
+import SquaresBackground from './ui/SquaresBackground'
 import { useLanguage } from '../hooks/useLanguage'
 
 const Education = () => {
@@ -66,8 +67,14 @@ const Education = () => {
 
 
   return (
-    <section ref={ref} id="education" className="py-24 bg-gray-800">
-      <div className="container mx-auto px-6">
+    <section ref={ref} id="education" className="py-24 bg-gray-800 relative">
+      <SquaresBackground 
+        size={35}
+        gap={5}
+        color="#1f2937"
+        opacity={0.06}
+      />
+      <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg mb-6">
             <GraduationCap className="w-4 h-4 text-gray-400" />

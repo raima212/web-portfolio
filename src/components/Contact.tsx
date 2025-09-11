@@ -3,6 +3,7 @@ import { Mail, MapPin, Download, Send, Github, Linkedin, Instagram, CheckCircle,
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import TextType from './ui/TextType'
+import SquaresBackground from './ui/SquaresBackground'
 import { useLanguage } from '../hooks/useLanguage'
 // Removed EmailJS, using Formspree instead
 
@@ -112,8 +113,14 @@ const Contact = () => {
   ]
 
   return (
-    <section ref={ref} id="contact" className="py-24 pb-32 bg-gray-800">
-      <div className="container mx-auto px-6">
+    <section ref={ref} id="contact" className="py-24 pb-32 bg-gray-800 relative">
+      <SquaresBackground 
+        size={45}
+        gap={7}
+        color="#0f172a"
+        opacity={0.03}
+      />
+      <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg mb-6">
             <Mail className="w-4 h-4 text-gray-400" />
