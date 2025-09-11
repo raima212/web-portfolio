@@ -136,16 +136,18 @@ const Projects = () => {
         'Scroll animation',
       ],
       challenges: [
-
+        'Canvas animation performance',
+        'Responsive design complexity',
+        'Smooth scrolling implementation'
       ],
       results: [
-        '200% engagement increase',
-        '10+ platform support',
-        'Real-time analytics',
-        'Automatic content planning'
+        'Fast loading times',
+        'Mobile responsive design',
+        'Smooth animations',
+        'Accessibility compliant'
       ],
-      liveUrl: 'https://social-dashboard.com',
-      githubUrl: 'https://github.com/MelihIlker/social-dashboard',
+      liveUrl: 'https://melihilker.com',
+      githubUrl: 'https://github.com/MelihIlker/personal-website',
       color: 'from-purple-600 to-purple-800'
     },
   ]

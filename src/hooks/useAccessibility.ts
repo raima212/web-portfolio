@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 
-// Keyboard navigation hook
 export const useKeyboardNavigation = (onEscape?: () => void) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -14,7 +13,6 @@ export const useKeyboardNavigation = (onEscape?: () => void) => {
   }, [onEscape])
 }
 
-// High contrast mode detection
 export const useHighContrast = () => {
   const [isHighContrast, setIsHighContrast] = useState(false)
 
@@ -33,7 +31,6 @@ export const useHighContrast = () => {
   return isHighContrast
 }
 
-// Reduced motion detection
 export const useReducedMotion = () => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
 
