@@ -1,4 +1,5 @@
 import { useState, Suspense } from 'react'
+import { createPortal } from 'react-dom'
 import { Github, X, Calendar, Users, Globe } from 'lucide-react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import TextType from './ui/TextType'
@@ -280,9 +281,9 @@ const Projects = () => {
         </div>
 
         {/* Project Modal */}
-        {selectedProject && (
+        {selectedProject && createPortal(
           <div 
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[60]"
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[9999]"
             onClick={closeModal}
             data-modal="true"
           >
@@ -417,7 +418,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        )}
+        , document.body)}
       </div>
     </section>
   )
