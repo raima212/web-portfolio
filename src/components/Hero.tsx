@@ -9,8 +9,6 @@ import { useLanguage } from '../hooks/useLanguage'
 
 const Hero = () => {
   const { t } = useLanguage()
-  
-  // Typewriter animations
   const [whoamiComplete, setWhoamiComplete] = useState(false)
   const [nameComplete, setNameComplete] = useState(false)
   const [catComplete, setCatComplete] = useState(false)

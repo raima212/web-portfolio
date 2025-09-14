@@ -15,12 +15,12 @@ const Experience = () => {
       period: '2023 - 2024',
       location: 'İstanbul, Türkiye',
       type: 'Internship',
-      description: 'Developed company-specific asset inventory management system and user-friendly department statistics reporting websites. Built web applications for scheduled company acivities and live currency exchange rates. Created custom admin panel applications tailored to internal needs. Monitored Oracle databases and performed regular Jira reporting while contributing to practical, user-oriented software solutions.',
+      description: (t('experience.description_1')),
       achievements: [
-        'Developed company-specific asset inventory management system and user-friendly department statistics reporting websites.',
-        'Built web applications for scheduled company acivities and live currency exchange rates.',
-        'Created custom admin panel applications tailored to internal needs.',
-        'Monitored Oracle databases and performed regular Jira reporting while contributing to practical, user-oriented software solutions.'
+        (t('experience.achievements_1')),
+        (t('experience.achievements_2')),
+        (t('experience.achievements_3')),
+        (t('experience.achievements_4'))
       ],
       technologies: ['.NET Framework', 'ASP.NET', '.NET MVC', 'SQL Server', 'Oracle', 'Jira', 'C#', 'JavaScript', 'HTML', 'CSS'],
       color: 'from-blue-600 to-blue-800'
@@ -32,12 +32,12 @@ const Experience = () => {
       period: '2016 - Present',
       location: 'Istanbul, Türkiye',
       type: 'Full-time',
-      description: 'Built over 10 web apps using React, Next.js, and Vite. Work on multi-user systems with auth, real-time updates, and dashboards. Use AWS S3 and Supabase for backend. Keep 99% client satisfaction.',
+      description: (t('experience.description_2')),
       achievements: [
-        'Built 10+ web apps with React, Next.js, and Vite',
-        'Made multi-user systems with auth and real-time updates',
-        'Used AWS S3 and Supabase for backend stuff',
-        'Keep 99% client satisfaction with on-time delivery'
+        (t('experience.achievements_5')),
+        (t('experience.achievements_6')),
+        (t('experience.achievements_7')),
+        (t('experience.achievements_8'))
       ],
       technologies: ['React', 'TypeScript', 'Next.js', 'Node.js', 'Express.js', 'Vite', 'AWS S3', 'Supabase', 'MongoDB', 'PostgreSQL', 'Micsrofot SQL Server', 'MySQL', 'HeidiSQL', 'SQLite', 'Tailwind CSS',  'JavaScript', 'Java', 'Spring Boot', 'Git', 'HTML', 'CSS', 'REST APIs', 'GraphQL', 'API Documentation', 'API Security', 'API Performance'],
       color: 'from-green-600 to-green-800'

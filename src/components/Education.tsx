@@ -11,11 +11,11 @@ const Education = () => {
   const educationData = [
     {
       id: 1,
-      school: 'Bandırma Onyedi Eylül Üniversitesi',
-      degree: 'Bilgisayar Programcılığı',
+      school: (t('education.name_1')),
+      degree: (t('education.degree_1')),
       period: '2025 - 2027',
       gpa: '0.0/4.0',
-      description: 'Bilgisayar Programcılığı bölümünde eğitim alıyorum. Modern web teknolojileri, veritabanı yönetimi ve mobil uygulama geliştirme konularında ileri seviye eğitim alıyorum.',
+      description: (t('education.description_1')),
       achievements: [
         'Web Application Development',
         'Database Management',
@@ -31,11 +31,11 @@ const Education = () => {
     },
     {
         id: 2,
-        school: 'Küçükyalı Mesleki ve Teknik Anadolu Lisesi',
-        degree: 'Information Technology',
+        school: (t('education.name_2')),
+        degree: (t('education.degree_2')),
         period: '2020-2024',
         gpa: '85,75 / 100',
-        description: 'Yazılım geliştirme, algoritma tasarımı ve sistem mimarisi konularında kapsamlı eğitim aldım. Web teknolojileri ve mobil uygulama geliştirme alanlarında projeler gerçekleştirdim.',
+        description: (t('education.description_2')),
         achievements: [
           'Mobile Application Development',
           'Web Application Development',
@@ -46,11 +46,11 @@ const Education = () => {
       },
     {
       id: 3,
-      school: 'LinkedIn Learning',
-      degree: 'API Development',
+      school: (t('education.name_3')),
+      degree: (t('education.degree_3')),
       period: '2025',
-      gpa: 'Tamamlandı',
-      description: 'API Development konularında ileri seviye eğitim aldım.',
+      gpa: (t('education.gpa_3')),
+      description: (t('education.description_3')),
       achievements: [
         'API Development',
         'API Testing',

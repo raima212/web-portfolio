@@ -9,6 +9,3 @@ export interface LanguageContextType {
 }
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
-
-
-
