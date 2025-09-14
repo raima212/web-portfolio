@@ -197,18 +197,18 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 transition-all duration-1000 delay-300 place-items-center ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <Suspense fallback={
             <>
-              <ProjectSkeleton />
-              <ProjectSkeleton />
-              <ProjectSkeleton />
+              <div className="w-full max-w-sm"><ProjectSkeleton /></div>
+              <div className="w-full max-w-sm"><ProjectSkeleton /></div>
+              <div className="w-full max-w-sm"><ProjectSkeleton /></div>
             </>
           }>
             {projects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-gray-900 border border-gray-800 rounded overflow-hidden hover:border-gray-600 transition-all duration-300 cursor-pointer"
+              className="bg-gray-900 border border-gray-800 rounded overflow-hidden hover:border-gray-600 transition-all duration-300 cursor-pointer w-full max-w-sm"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openModal(project)}
             >
