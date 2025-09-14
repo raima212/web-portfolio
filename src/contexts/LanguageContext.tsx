@@ -58,6 +58,7 @@ const translations = {
     'experience.technologies': 'Kullanılan Teknolojiler',
     'experience.achievements': 'Önemli Başarılar',
     // Panasonic Internship
+    'experience.description_1': 'Şirketlere özel varlık envanter yönetim sistemi ve kullanıcı dostu departman istatistik raporlama web siteleri geliştirdim. Planlı şirket faaliyetleri ve canlı döviz kurları için web uygulamaları inşa ettim. İç ihtiyaçlara yönelik özel yönetici paneli uygulamaları oluşturdum. Oracle veritabanlarını izledim ve düzenli Jira raporlaması yaparken, pratik ve kullanıcı odaklı yazılım çözümlerine katkıda bulundum.',
     'experience.achievements_1': 'Şirketlere özel varlık envanter yönetim sistemi ve kullanıcı dostu departman istatistik raporlama web siteleri geliştirdim.',
     'experience.achievements_2': 'Planlı şirket faaliyetleri ve canlı döviz kurları için web uygulamaları inşa ettim.',
     'experience.achievements_3': 'İç ihtiyaçlara yönelik özel yönetici paneli uygulamaları oluşturdum.',
