@@ -86,42 +86,42 @@ const Projects = () => {
     /*  githubUrl: 'https://github.com/ilker/ecommerce', */
       color: 'from-blue-600 to-blue-800'
     },
-    {
-      id: 2,
-      title: 'NullSect Development',
-      description: 'FiveM Script Development Platform (Full-Stack)',
-      longDescription: 'A professional platform providing custom script development, modification, and technical support services for FiveM server owners. Built with React.js, TypeScript, and Tailwind CSS. Features responsive design with glass morphism effects and dark theme optimized for gaming community.',
-      image: '/api/placeholder/400/300',
-      technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Vercel', 'GitHub', 'Responsive Design', 'SEO Optimization', 'Glass Morphism', 'Dark Theme', 'Component Architecture', 'Performance Optimization', 'Accessibility'],
-      category: 'Full Stack',
-      period: '2024',
-      teamSize: '1 Developer',
-      features: [
-        'Responsive design with glass morphism effects and dark theme optimized for gaming community',
-        'Multi-page structure including services showcase, product portfolio, and company information',
-        'Interactive animations with hover effects and smooth transitions',
-        'Performance optimization with component-based architecture and type-safe development',
-        'SEO optimized with semantic HTML structure and accessibility compliance',
-        'Professional service platform for the gaming industry',
-        'Custom script development and modification services',
-        'Technical support services for FiveM server owners'
-      ],
-      challenges: [
-        'Creating gaming-optimized UI/UX design',
-        'Implementing glass morphism effects',
-        'Performance optimization for gaming community',
-        'SEO and accessibility compliance'
-      ],
-      results: [
-        'Professional gaming platform',
-        'Modern React.js development showcase',
-        'UI/UX design principles demonstration',
-        'SEO and accessibility compliant'
-      ],
-      liveUrl: 'https://nullsect.vercel.app',
-      githubUrl: 'https://github.com/MelihIlker/nullsect',
-      color: 'from-purple-600 to-purple-800'
-    },
+    // {
+    //   id: 2,
+    //   title: 'NullSect Development',
+    //   description: 'FiveM Script Development Platform (Full-Stack)',
+    //   longDescription: 'A professional platform providing custom script development, modification, and technical support services for FiveM server owners. Built with React.js, TypeScript, and Tailwind CSS. Features responsive design with glass morphism effects and dark theme optimized for gaming community.',
+    //   image: '/api/placeholder/400/300',
+    //   technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Vercel', 'GitHub', 'Responsive Design', 'SEO Optimization', 'Glass Morphism', 'Dark Theme', 'Component Architecture', 'Performance Optimization', 'Accessibility'],
+    //   category: 'Full Stack',
+    //   period: '2024',
+    //   teamSize: '1 Developer',
+    //   features: [
+    //     'Responsive design with glass morphism effects and dark theme optimized for gaming community',
+    //     'Multi-page structure including services showcase, product portfolio, and company information',
+    //     'Interactive animations with hover effects and smooth transitions',
+    //     'Performance optimization with component-based architecture and type-safe development',
+    //     'SEO optimized with semantic HTML structure and accessibility compliance',
+    //     'Professional service platform for the gaming industry',
+    //     'Custom script development and modification services',
+    //     'Technical support services for FiveM server owners'
+    //   ],
+    //   challenges: [
+    //     'Creating gaming-optimized UI/UX design',
+    //     'Implementing glass morphism effects',
+    //     'Performance optimization for gaming community',
+    //     'SEO and accessibility compliance'
+    //   ],
+    //   results: [
+    //     'Professional gaming platform',
+    //     'Modern React.js development showcase',
+    //     'UI/UX design principles demonstration',
+    //     'SEO and accessibility compliant'
+    //   ],
+    //   liveUrl: 'https://nullsect.vercel.app',
+    //   githubUrl: 'https://github.com/MelihIlker/nullsect',
+    //   color: 'from-purple-600 to-purple-800'
+    // },
     {
       id: 3,
       title: 'Web Portfolio',
@@ -151,7 +151,7 @@ const Projects = () => {
         (t('project.results_7')),
         (t('project.results_8')),
       ],
-      liveUrl: 'https://melihilker.com',
+      liveUrl: 'https://melihilker-portfolio.vercel.app',
       githubUrl: 'https://github.com/MelihIlker/personal-website',
       color: 'from-indigo-600 to-indigo-800'
     },
