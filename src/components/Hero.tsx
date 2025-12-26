@@ -31,7 +31,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-900 relative overflow-hidden pt-24 pb-16">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 relative overflow-hidden pt-24 pb-16">
       {/* Squares Background Pattern */}
       <SquaresBackground 
         speed={0.3}
@@ -42,8 +42,8 @@ const Hero = () => {
       />
       
       {/* Floating Elements */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-300 dark:bg-gray-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-200 dark:bg-gray-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -57,17 +57,17 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               {/* Terminal Header */}
-              <div className="flex items-center gap-2 px-4 py-2 bg-gray-800 border border-gray-700 rounded-t-lg">
+              <div className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-t-lg">
                 <div className="flex gap-2">
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <span className="text-gray-400 text-sm ml-4">mely@portfolio:~$</span>
+                <span className="text-gray-600 dark:text-gray-400 text-sm ml-4">mely@portfolio:~$</span>
               </div>
               
               {/* Terminal Content */}
-              <div className="bg-gray-900 border border-gray-700 border-t-0 rounded-b-lg p-8 text-left font-mono">
+              <div className="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 border-t-0 rounded-b-lg p-8 text-left font-mono">
                 <div className="space-y-4">
                   {/* whoami command */}
                   <div className="flex items-center gap-2">
@@ -80,7 +80,7 @@ const Hero = () => {
                     />
                   </div>
                   
-                  <div className="text-4xl lg:text-6xl font-bold text-white ml-4">
+                  <div className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white ml-4">
                     <TextType 
                       text={t('hero.name')} 
                       speed={30} 
@@ -117,7 +117,7 @@ const Hero = () => {
                   </div>
 
                   {/* Description with Typewriter Effect */}
-                  <div className="text-lg text-gray-300 ml-4 max-w-2xl leading-relaxed">
+                  <div className="text-lg text-gray-600 dark:text-gray-300 ml-4 max-w-2xl leading-relaxed">
                     <TextType 
                       text={t('hero.description')} 
                       speed={15} 
@@ -134,25 +134,25 @@ const Hero = () => {
                   >
                     <a 
                       href="https://github.com/MelihIlker" 
-                      className="p-3 bg-gray-800 hover:bg-gray-700 rounded border border-gray-600 transition-all duration-300 transform hover:scale-110"
+                      className="p-3 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded border border-gray-300 dark:border-gray-600 transition-all duration-300 transform hover:scale-110"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Github className="w-5 h-5 text-gray-300" />
+                      <Github className="w-5 h-5 text-gray-600 dark:text-gray-300" />
                     </a>
                     <a 
                       href="https://www.linkedin.com/in/melihilker" 
-                      className="p-3 bg-gray-800 hover:bg-gray-700 rounded border border-gray-600 transition-all duration-300 transform hover:scale-110"
+                      className="p-3 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded border border-gray-300 dark:border-gray-600 transition-all duration-300 transform hover:scale-110"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Linkedin className="w-5 h-5 text-gray-300" />
+                      <Linkedin className="w-5 h-5 text-gray-600 dark:text-gray-300" />
                     </a>
                     <a 
                       href="mailto:melihilker9@gmail.com" 
-                      className="p-3 bg-gray-800 hover:bg-gray-700 rounded border border-gray-600 transition-all duration-300 transform hover:scale-110"
+                      className="p-3 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded border border-gray-300 dark:border-gray-600 transition-all duration-300 transform hover:scale-110"
                     >
-                      <Mail className="w-5 h-5 text-gray-300" />
+                      <Mail className="w-5 h-5 text-gray-600 dark:text-gray-300" />
                     </a>
                   </motion.div>
 
@@ -165,7 +165,7 @@ const Hero = () => {
                   >
                     <motion.button 
                       onClick={scrollToProjects}
-                      className="group flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white text-sm rounded border border-gray-600 transition-all duration-300"
+                      className="group flex items-center gap-2 px-6 py-3 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-800 dark:text-white text-sm rounded border border-gray-300 dark:border-gray-600 transition-all duration-300"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -175,7 +175,7 @@ const Hero = () => {
                     </motion.button>
                     <motion.button 
                       onClick={downloadCV}
-                      className="group flex items-center gap-2 px-6 py-3 border border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white text-sm rounded transition-all duration-300"
+                      className="group flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-gray-800 dark:hover:text-white text-sm rounded transition-all duration-300"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
