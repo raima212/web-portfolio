@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import ErrorBoundary from './components/ErrorBoundary'
 import { LanguageProvider } from './contexts/LanguageContext.tsx'
+import { ThemeProvider } from './contexts/ThemeContext'
 import { useState } from 'react'
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
   
   return (
     <ErrorBoundary>
-      <LanguageProvider>
-        <div className="min-h-screen bg-gray-900 text-white overflow-y-scroll">
+      <ThemeProvider>
+        <LanguageProvider>
+          <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-y-scroll">
           <ErrorBoundary>
             <Navbar onCollapseChange={setIsCollapsed} />
           </ErrorBoundary>
@@ -41,8 +43,9 @@ function App() {
               <Contact />
             </ErrorBoundary>
           </div>
-        </div>
-      </LanguageProvider>
+          </div>
+        </LanguageProvider>
+      </ThemeProvider>
     </ErrorBoundary>
   )
 }
